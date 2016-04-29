@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body background="http://www.wyzu.cn/uploadfile/2013/0319/20130319010102143.jpg">
+    <h1><%= title %></h1>
+    <% if(who){ %>
+    <p>安安給虧嗎! <%=who %></p>
+    <a href="/articles">發表文章<a>
+    <% } else { %>
+
+    <form method="post" action="/verify">
+      <p>
+        名稱：<input type="text" id="username" name="username" />
+        <input type="submit" value="登入"/>
+      </p>
+    </form>
+    <% } %>
+  </body>
+</html>
